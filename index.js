@@ -6,7 +6,7 @@ function rot47(input) {
   for (var c = 0; c < input.length; c++) {
     var cp = input.charCodeAt(c);
     if (BEG <= cp && cp <= END)
-      output.push(String.fromCodePoint((cp - BEG + LEN/2) % LEN + BEG));
+      output.push(String.fromCharCode((cp - BEG + LEN/2) % LEN + BEG));
     else
       output.push(input[c]);
   }
